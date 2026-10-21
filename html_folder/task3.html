@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Title: My Restaurant Menu -->
+    <title>My Restaurant Menu</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            /* Food-related background image with overlay for readability */
+            background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), 
+                        url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1920&q=80') center/cover fixed no-repeat;
+            color: #2c3e50;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: rgba(255, 255, 255, 0.95);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        h1 {
+            text-align: center;
+            color: #b71c1c;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .intro {
+            text-align: center;
+            font-size: 1.1em;
+            color: #555;
+            margin-bottom: 30px;
+            font-style: italic;
+        }
+
+        h2 {
+            color: #d32f2f;
+            border-bottom: 2px solid #ffcdd2;
+            padding-bottom: 5px;
+            margin-top: 30px;
+        }
+
+        .menu-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .food-img {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-right: 15px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        ul, ol {
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 12px;
+        }
+
+        .item-title {
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+
+        .price {
+            color: #2e7d32;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Main Heading -->
+        <h1>My Restaurant Menu</h1>
+
+        <!-- Introduction Paragraph -->
+        <p class="intro">
+            Welcome to Bistro Delights, where culinary passion meets fresh, locally sourced ingredients. Experience an unforgettable dining journey featuring authentic flavors, masterfully prepared by our world-class chefs in a warm and inviting atmosphere.
+        </p>
+
+        <!-- Starters: Unordered List -->
+        <h2>Starters</h2>
+        <ul>
+            <li>
+                <div class="menu-item">
+                    <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?auto=format&fit=crop&w=200&q=80" alt="Crispy Garlic Bread" class="food-img">
+                    <div>
+                        <span class="item-title">Crispy Garlic Bread</span> - <span class="price">$6.99</span>
+                        <p style="margin: 3px 0 0 0; font-size: 0.9em; color: #666;">Oven-baked baguette brushed with fresh garlic butter and herbs.</p>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="menu-item">
+                    <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=200&q=80" alt="Fresh Caesar Salad" class="food-img">
+                    <div>
+                        <span class="item-title">Fresh Caesar Salad</span> - <span class="price">$8.50</span>
+                        <p style="margin: 3px 0 0 0; font-size: 0.9em; color: #666;">Crisp romaine lettuce, parmesan cheese, croutons, and classic Caesar dressing.</p>
+                    </div>
+                </div>
+            </li>
+        </ul>
+
+        <!-- Main Course: Ordered List -->
+        <h2>Main Course</h2>
+        <ol>
+            <li>
+                <div class="menu-item">
+                    <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=200&q=80" alt="Grilled Salmon" class="food-img">
+                    <div>
+                        <span class="item-title">Grilled Atlantic Salmon</span> - <span class="price">$22.00</span>
+                        <p style="margin: 3px 0 0 0; font-size: 0.9em; color: #666;">Served with lemon-herb butter sauce, asparagus, and roasted potatoes.</p>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="menu-item">
+                    <img src="https://images.unsplash.com/photo-1604382354936-07c5d9983bd3?auto=format&fit=crop&w=200&q=80" alt="Margherita Pizza" class="food-img">
+                    <div>
+                        <span class="item-title">Classic Margherita Pizza</span> - <span class="price">$15.99</span>
+                        <p style="margin: 3px 0 0 0; font-size: 0.9em; color: #666;">Wood-fired pizza topped with fresh mozzarella, tomatoes, and basil leaves.</p>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="menu-item">
+                    <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=200&q=80" alt="Gourmet Beef Burger" class="food-img">
+                    <div>
+                        <span class="item-title">Gourmet Beef Burger</span> - <span class="price">$14.50</span>
+                        <p style="margin: 3px 0 0 0; font-size: 0.9em; color: #666;">Juicy Angus beef patty with cheddar cheese, lettuce, and special sauce served with fries.</p>
+                    </div>
+                </div>
+            </li>
+        </ol>
+
+        <!-- Categories: Nested List -->
+        <h2>Categories</h2>
+        <ul>
+            <li>
+                <strong>Vegetarian Specialities</strong>
+                <ul>
+                    <li>Paneer Butter Masala</li>
+                    <li>Vegetable Pasta Primavera</li>
+                </ul>
+            </li>
+            <li>
+                <strong>Beverages</strong>
+                <ul>
+                    <li>Fresh Mango Lassi</li>
+                    <li>Iced Caramel Macchiato</li>
+                </ul>
+            </li>
+            <li>
+                <strong>Desserts</strong>
+                <ul>
+                    <li>Molten Chocolate Lava Cake</li>
+                    <li>Classic New York Cheesecake</li>
+                </ul>
+            </li>
+        </ul>
+
+    </div>
+
+</body>
+</html>

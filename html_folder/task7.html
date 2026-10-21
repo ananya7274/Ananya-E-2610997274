@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Title: World Map Explorer -->
+    <title>World Map Explorer</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #0f172a;
+            color: #f8fafc;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: #1e293b;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+        }
+
+        h1 {
+            color: #38bdf8;
+            margin-bottom: 10px;
+        }
+
+        p.description {
+            color: #94a3b8;
+            font-size: 1.05rem;
+            margin-bottom: 25px;
+        }
+
+        .map-wrapper {
+            display: inline-block;
+            border: 3px solid #334155;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Web Page Title / Main Heading -->
+        <h1>World Map Explorer</h1>
+        <p class="description">Click on different countries or regions on the world map below to explore external information pages for each location!</p>
+
+        <div class="map-wrapper">
+            <!-- World Map Image with usemap attribute -->
+            <img src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?auto=format&fit=crop&w=1000&q=80" 
+                 alt="World Map Image" 
+                 usemap="#world-map" 
+                 width="1000" 
+                 height="500">
+
+            <!-- Image Map using circle, rect, poly, and default shapes -->
+            <map name="world-map">
+                
+                <!-- 1. Circle shape: Island/Country Region (e.g. Japan / East Asia region) -->
+                <area shape="circle" 
+                      coords="850,220,50" 
+                      href="https://en.wikipedia.org/wiki/Japan" 
+                      alt="Japan - Circular Region" 
+                      title="Explore Japan" 
+                      target="_blank">
+
+                <!-- 2. Rect shape: Rectangular Country Region (e.g. United States) -->
+                <area shape="rect" 
+                      coords="150,120,320,250" 
+                      href="https://en.wikipedia.org/wiki/United_States" 
+                      alt="United States - Rectangular Region" 
+                      title="Explore United States" 
+                      target="_blank">
+
+                <!-- 3. Poly shape: Polygon / Irregular Country Region (e.g. India) -->
+                <area shape="poly" 
+                      coords="670,220, 720,220, 710,290, 680,310, 660,260" 
+                      href="https://en.wikipedia.org/wiki/India" 
+                      alt="India - Irregular/Polygon Region" 
+                      title="Explore India" 
+                      target="_blank">
+
+                <!-- 4. Poly shape: Polygon / Irregular Country Region (e.g. Australia) -->
+                <area shape="poly" 
+                      coords="800,340, 880,330, 890,410, 820,420, 790,370" 
+                      href="https://en.wikipedia.org/wiki/Australia" 
+                      alt="Australia - Polygon Region" 
+                      title="Explore Australia" 
+                      target="_blank">
+
+                <!-- 5. Default shape: Covers all other remaining unmapped areas -->
+                <area shape="default" 
+                      href="https://en.wikipedia.org/wiki/World" 
+                      alt="Remaining Area - World Overview" 
+                      title="Explore World Overview" 
+                      target="_blank">
+
+            </map>
+        </div>
+    </div>
+
+</body>
+</html>

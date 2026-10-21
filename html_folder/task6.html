@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Restaurant Menu</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8fafc;
+            color: #1e293b;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            color: #b91c1c;
+            margin-bottom: 10px;
+        }
+
+        p.instruction {
+            color: #64748b;
+            font-size: 1.05rem;
+            margin-bottom: 25px;
+        }
+
+        .menu-wrapper {
+            display: inline-block;
+            border: 4px solid #e2e8f0;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        /* Responsive image mapping styling */
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Interactive Restaurant Menu</h1>
+        <p class="instruction">Click on any food item or area on the table image below to explore details about that specific menu item!</p>
+
+        <div class="menu-wrapper">
+            <!-- Food image with assigned usemap attribute -->
+            <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=800&q=80" 
+                 alt="Interactive Food Menu Table" 
+                 usemap="#restaurant-menu-map" 
+                 width="800" 
+                 height="533">
+
+            <!-- Image Map Definition matching all shape requirements -->
+            <map name="restaurant-menu-map">
+                <!-- 1. Pizza (Shape: circle) -->
+                <area shape="circle" 
+                      coords="680,360,80" 
+                      href="https://en.wikipedia.org/wiki/Pizza" 
+                      alt="Pizza" 
+                      title="Pizza" 
+                      target="_blank">
+
+                <!-- 2. Burger (Shape: circle) -->
+                <area shape="circle" 
+                      coords="150,320,65" 
+                      href="https://en.wikipedia.org/wiki/Hamburger" 
+                      alt="Burger" 
+                      title="Burger" 
+                      target="_blank">
+
+                <!-- 3. French Fries (Shape: rect) -->
+                <area shape="rect" 
+                      coords="620,180,740,290" 
+                      href="https://en.wikipedia.org/wiki/French_fries" 
+                      alt="French Fries" 
+                      title="French Fries" 
+                      target="_blank">
+
+                <!-- 4. Menu Card (Shape: rect) -->
+                <area shape="rect" 
+                      coords="50,40,250,150" 
+                      href="https://en.wikipedia.org/wiki/Menu" 
+                      alt="Menu Card" 
+                      title="Menu Card" 
+                      target="_blank">
+
+                <!-- 5. Sandwich (Shape: poly) -->
+                <area shape="poly" 
+                      coords="280,380, 360,340, 420,410, 340,460" 
+                      href="https://en.wikipedia.org/wiki/Sandwich" 
+                      alt="Sandwich" 
+                      title="Sandwich" 
+                      target="_blank">
+
+                <!-- 6. Cake Slice (Shape: poly) -->
+                <area shape="poly" 
+                      coords="450,120, 520,80, 560,150, 480,180" 
+                      href="https://en.wikipedia.org/wiki/Cake" 
+                      alt="Cake Slice" 
+                      title="Cake Slice" 
+                      target="_blank">
+
+                <!-- 7. Remaining/Other Area (Shape: default) -->
+                <area shape="default" 
+                      href="https://en.wikipedia.org/wiki/Restaurant" 
+                      alt="Remaining/Other Area" 
+                      title="General Restaurant Info" 
+                      target="_blank">
+            </map>
+        </div>
+    </div>
+
+</body>
+</html>

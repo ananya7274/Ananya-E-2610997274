@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Title: Student Examination Result -->
+    <title>Student Examination Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f9;
+            margin: 30px;
+            color: #333;
+        }
+
+        .table-container {
+            max-width: 850px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #1a365d;
+            margin-bottom: 20px;
+        }
+
+        /* Table alignment & structure */
+        table {
+            width: 100%;
+            margin: 0 auto;
+            border-collapse: separate;
+            background-color: #ffffff;
+        }
+
+        /* Table header styles */
+        .main-header {
+            background-color: #3b82f6;
+            color: #ffffff;
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .sub-header {
+            background-color: #e2e8f0;
+            color: #1e293b;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        /* Data cell alignments */
+        td {
+            text-align: center;
+            font-size: 0.95rem;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f8fafc;
+        }
+
+        /* Pass/Fail styling matching slide */
+        .pass {
+            color: #16a34a;
+            font-weight: bold;
+        }
+
+        .fail {
+            color: #dc2626;
+            font-weight: bold;
+        }
+
+        .class-avg {
+            background-color: #f1f5f9;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="table-container">
+        <h1>Student Examination Result</h1>
+
+        <!-- 
+          Requirements Met:
+          - Title: Student Examination Result
+          - Table attributes: border, cellpadding, cellspacing, align
+          - Table features: rowspan, colspan
+          - Columns: S. No., Student Name, Roll Number, Subjects (Science, Maths, English), Total, Result
+        -->
+        <table border="1" cellpadding="8" cellspacing="0" align="center">
+            <thead>
+                <!-- Top Main Header using colspan="8" -->
+                <tr>
+                    <th colspan="8" class="main-header">Student Examination Result</th>
+                </tr>
+                <!-- Sub Header Row using rowspan and colspan -->
+                <tr class="sub-header">
+                    <th rowspan="2">S. No.</th>
+                    <th rowspan="2">Student Name</th>
+                    <th rowspan="2">Roll Number</th>
+                    <th colspan="3">Subjects</th>
+                    <th rowspan="2">Total</th>
+                    <th rowspan="2">Result</th>
+                </tr>
+                <tr class="sub-header">
+                    <th>Science</th>
+                    <th>Maths</th>
+                    <th>English</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td align="left">Aarav Sharma</td>
+                    <td>101</td>
+                    <td>85</td>
+                    <td>90</td>
+                    <td>78</td>
+                    <td>253</td>
+                    <td class="pass">Pass</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td align="left">Neha Gupta</td>
+                    <td>102</td>
+                    <td>92</td>
+                    <td>88</td>
+                    <td>95</td>
+                    <td>275</td>
+                    <td class="pass">Pass</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td align="left">Rohan Mehta</td>
+                    <td>103</td>
+                    <td>76</td>
+                    <td>82</td>
+                    <td>70</td>
+                    <td>228</td>
+                    <td class="pass">Pass</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td align="left">Sneha Verma</td>
+                    <td>104</td>
+                    <td>68</td>
+                    <td>74</td>
+                    <td>72</td>
+                    <td>214</td>
+                    <td class="fail">Fail</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td align="left">Karan Singh</td>
+                    <td>105</td>
+                    <td>88</td>
+                    <td>93</td>
+                    <td>85</td>
+                    <td>266</td>
+                    <td class="pass">Pass</td>
+                </tr>
+                <!-- Class Average Row using colspan="3" -->
+                <tr class="class-avg">
+                    <td colspan="3" align="center"><b>Class Average</b></td>
+                    <td>81.8</td>
+                    <td>85.4</td>
+                    <td>80.0</td>
+                    <td>247.2</td>
+                    <td>-</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</body>
+</html>

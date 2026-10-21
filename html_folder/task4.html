@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Title: My College -->
+    <title>My College</title>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            /* Suitable college/campus background image */
+            background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.85)), 
+                        url('https://images.unsplash.com/photo-1541829070764-84a7d30dd3f3?auto=format&fit=crop&w=1920&q=80') center/cover fixed no-repeat;
+            color: #1e293b;
+        }
+
+        /* Fixed Navigation Bar with Internal Bookmark Links */
+        nav {
+            position: sticky;
+            top: 0;
+            background-color: #0f172a;
+            padding: 12px 20px;
+            text-align: center;
+            z-index: 1000;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+        }
+
+        nav a {
+            color: #f8fafc;
+            text-decoration: none;
+            margin: 0 12px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: color 0.2s ease;
+        }
+
+        nav a:hover {
+            color: #38bdf8;
+        }
+
+        .container {
+            max-width: 950px;
+            margin: 30px auto;
+            background-color: rgba(255, 255, 255, 0.96);
+            padding: 35px;
+            border-radius: 12px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+        }
+
+        h1 {
+            color: #1e3a8a;
+            text-align: center;
+            font-size: 2.4rem;
+            margin-top: 0;
+            border-bottom: 3px solid #3b82f6;
+            padding-bottom: 10px;
+        }
+
+        h2 {
+            color: #1d4ed8;
+            margin-top: 30px;
+            border-bottom: 1px solid #e2e8f0;
+            padding-bottom: 6px;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        dt {
+            font-weight: bold;
+            color: #0f172a;
+            font-size: 1.05rem;
+            margin-top: 10px;
+        }
+
+        dd {
+            margin-left: 20px;
+            margin-bottom: 12px;
+            color: #334155;
+        }
+
+        .back-to-top {
+            display: inline-block;
+            margin-top: 15px;
+            font-size: 0.88rem;
+            color: #2563eb;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .back-to-top:hover {
+            text-decoration: underline;
+        }
+
+        .external-link {
+            display: inline-block;
+            background-color: #2563eb;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 6px;
+            text-decoration: none;
+            margin-top: 10px;
+            font-weight: 500;
+        }
+
+        .external-link:hover {
+            background-color: #1d4ed8;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Anchor Point for Bookmark Links -->
+    <div id="top"></div>
+
+    <!-- Bookmarks Navigation -->
+    <nav>
+        <a href="#about">About College</a>
+        <a href="#courses">Courses</a>
+        <a href="#departments">Departments</a>
+        <a href="#subjects">Subjects</a>
+        <a href="#facilities">Facilities</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="container">
+        <h1>Welcome to Apex University</h1>
+
+        <!-- College Image Gallery (At least 4 images related to college life) -->
+        <div class="gallery">
+            <img src="https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=400&q=80" alt="Campus Building">
+            <img src="https://images.unsplash.com/photo-1521587760476-6c12a4b040da?auto=format&fit=crop&w=400&q=80" alt="College Library">
+            <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=400&q=80" alt="Students Collaborating">
+            <img src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&w=400&q=80" alt="Science Laboratory">
+        </div>
+
+        <!-- Section: About College -->
+        <section id="about">
+            <h2>About College</h2>
+            <p>
+                Apex University is a premier institution dedicated to academic excellence, innovative research, and global leadership. Founded with a vision to nurture future leaders and innovators, our institution provides state-of-the-art infrastructure, world-class faculty, and a vibrant campus atmosphere designed to foster holistic personal and professional development.
+            </p>
+            <a href="#top" class="back-to-top">↑ Back to Top</a>
+        </section>
+
+        <!-- Section: Courses -->
+        <section id="courses">
+            <h2>Courses Offered</h2>
+            <!-- Unordered list of 5 courses -->
+            <ul>
+                <li>Bachelor of Technology (B.Tech) in Computer Science</li>
+                <li>Bachelor of Science (B.Sc) in Information Technology</li>
+                <li>Bachelor of Business Administration (BBA)</li>
+                <li>Master of Computer Applications (MCA)</li>
+                <li>Master of Business Administration (MBA)</li>
+            </ul>
+            <a href="#top" class="back-to-top">↑ Back to Top</a>
+        </section>
+
+        <!-- Section: Departments -->
+        <section id="departments">
+            <h2>Academic Departments</h2>
+            <!-- Ordered list of 5 departments -->
+            <ol>
+                <li>Department of Computer Science & Engineering</li>
+                <li>Department of Electronics & Communication</li>
+                <li>Department of Mechanical Engineering</li>
+                <li>Department of Business Management</li>
+                <li>Department of Applied Sciences</li>
+            </ol>
+            <a href="#top" class="back-to-top">↑ Back to Top</a>
+        </section>
+
+        <!-- Section: Subjects -->
+        <section id="subjects">
+            <h2>Departments and Subjects</h2>
+            <!-- Nested list: each department contains 2-3 subjects -->
+            <ul>
+                <li>
+                    <strong>Department of Computer Science & Engineering</strong>
+                    <ul>
+                        <li>Data Structures & Algorithms</li>
+                        <li>Database Management Systems</li>
+                        <li>Web Technologies</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Department of Electronics & Communication</strong>
+                    <ul>
+                        <li>Digital Electronics</li>
+                        <li>Microprocessors & Microcontrollers</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Department of Mechanical Engineering</strong>
+                    <ul>
+                        <li>Thermodynamics</li>
+                        <li>Fluid Mechanics</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Department of Business Management</strong>
+                    <ul>
+                        <li>Principles of Management</li>
+                        <li>Financial Accounting</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Department of Applied Sciences</strong>
+                    <ul>
+                        <li>Engineering Mathematics</li>
+                        <li>Applied Physics</li>
+                    </ul>
+                </li>
+            </ul>
+            <a href="#top" class="back-to-top">↑ Back to Top</a>
+        </section>
+
+        <!-- Section: Facilities -->
+        <section id="facilities">
+            <h2>Campus Facilities</h2>
+            <!-- Description list with facilities and descriptions -->
+            <dl>
+                <dt>Library</dt>
+                <dd>A place where students can read and borrow books.</dd>
+
+                <dt>Laboratory</dt>
+                <dd>A place where students perform practical work.</dd>
+
+                <dt>Cafeteria</dt>
+                <dd>A place where students can have food.</dd>
+
+                <dt>Sports Complex</dt>
+                <dd>A multi-purpose sports facility for indoor and outdoor games.</dd>
+
+                <dt>Auditorium</dt>
+                <dd>A venue for hosting academic conferences, seminars, and cultural events.</dd>
+            </dl>
+            <a href="#top" class="back-to-top">↑ Back to Top</a>
+        </section>
+
+        <!-- Section: Contact & External Links -->
+        <section id="contact">
+            <h2>Contact & External Links</h2>
+            <p>For more official updates, course syllabi, and admissions details, visit our official institution portal:</p>
+            <!-- External link to college website -->
+            <p>
+                <a href="https://www.google.com" target="_blank" class="external-link">Visit Official College Website ↗</a>
+            </p>
+            <a href="#top" class="back-to-top">↑ Back to Top</a>
+        </section>
+    </div>
+
+</body>
+</html>
