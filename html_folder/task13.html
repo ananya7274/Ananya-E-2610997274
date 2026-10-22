@@ -1,0 +1,210 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Readers' Haven - Book Order Form</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f4f8;
+            margin: 0;
+            padding: 25px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #1d3557;
+        }
+
+        form {
+            background-color: white;
+            max-width: 650px;
+            margin: auto;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px #cccccc;
+        }
+
+        h2 {
+            color: #2878a8;
+            border-bottom: 2px solid #2878a8;
+            padding-bottom: 5px;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 6px;
+            box-sizing: border-box;
+            border: 1px solid #bbb;
+            border-radius: 5px;
+        }
+
+        .option {
+            display: inline-block;
+            width: auto;
+            margin-right: 6px;
+        }
+
+        .option-label {
+            display: inline-block;
+            margin-right: 15px;
+            font-weight: normal;
+        }
+
+        button {
+            padding: 12px 22px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+            font-size: 16px;
+        }
+
+        .submit-btn {
+            background-color: #1d3557;
+            color: white;
+        }
+
+        .reset-btn {
+            background-color: #dddddd;
+            color: black;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Readers' Haven</h1>
+
+    <form action="#" method="post" enctype="multipart/form-data">
+
+        <h2>Customer Registration</h2>
+
+        <!-- Task 1: Form -->
+
+        <!-- Task 2 and 3: Customer Details -->
+        <label for="name">Customer Name:</label>
+        <input type="text" id="name" name="customer_name"
+               placeholder="Enter your full name" required>
+
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email"
+               placeholder="Enter your email address" required>
+
+        <label for="mobile">Mobile Number:</label>
+        <input type="tel" id="mobile" name="mobile"
+               placeholder="Enter your mobile number"
+               pattern="[0-9]{10}" required>
+
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age"
+               min="1" max="120" required>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password"
+               placeholder="Create a password" required>
+
+        <!-- Task 4: Delivery Date and Time -->
+        <h2>Delivery Details</h2>
+
+        <label for="date">Delivery Date:</label>
+        <input type="date" id="date" name="delivery_date" required>
+
+        <label for="time">Preferred Delivery Time:</label>
+        <input type="time" id="time" name="delivery_time" required>
+
+        <!-- Task 5: Favorite Book Category -->
+        <h2>Book Preferences</h2>
+
+        <label for="category">Favorite Book Category:</label>
+        <select id="category" name="category" required>
+            <option value="">-- Select a Category --</option>
+            <option value="fiction">Fiction</option>
+            <option value="science">Science</option>
+            <option value="history">History</option>
+            <option value="childrens">Children's Books</option>
+        </select>
+
+        <!-- Task 6: Book Title and Quantity -->
+        <label for="book">Book Title:</label>
+        <input type="text" id="book" name="book_title"
+               placeholder="Enter book title" required>
+
+        <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" name="quantity"
+               min="1" value="1" required>
+
+        <!-- Task 7: Payment Method -->
+        <h2>Payment Details</h2>
+
+        <label>Preferred Payment Method:</label>
+
+        <input class="option" type="radio" id="cod"
+               name="payment" value="Cash on Delivery" required>
+        <label class="option-label" for="cod">Cash on Delivery</label>
+
+        <input class="option" type="radio" id="online"
+               name="payment" value="Online Payment">
+        <label class="option-label" for="online">Online Payment</label>
+
+        <!-- Task 8: Additional Services -->
+        <h2>Additional Services</h2>
+
+        <input class="option" type="checkbox" id="gift"
+               name="services[]" value="Gift Wrapping">
+        <label class="option-label" for="gift">Gift Wrapping</label>
+
+        <input class="option" type="checkbox" id="bookmark"
+               name="services[]" value="Bookmark">
+        <label class="option-label" for="bookmark">Bookmark</label>
+
+        <input class="option" type="checkbox" id="express"
+               name="services[]" value="Express Delivery">
+        <label class="option-label" for="express">Express Delivery</label>
+
+        <input class="option" type="checkbox" id="greeting"
+               name="services[]" value="Greeting Card">
+        <label class="option-label" for="greeting">Greeting Card</label>
+
+        <!-- Task 9: Hidden Input -->
+        <input type="hidden" name="form_type"
+               value="Readers Haven Book Order">
+
+        <!-- Task 10: File Upload -->
+        <h2>Upload Reference</h2>
+
+        <label for="file">Upload Reference Image/Document:</label>
+        <input type="file" id="file" name="reference_file"
+               accept="image/*,.pdf,.doc,.docx">
+
+        <!-- Task 11: Address and Instructions -->
+        <h2>Address and Instructions</h2>
+
+        <label for="address">Delivery Address:</label>
+        <textarea id="address" name="address" rows="4"
+                  placeholder="Enter your complete delivery address"
+                  required></textarea>
+
+        <label for="instructions">Special Instructions:</label>
+        <textarea id="instructions" name="instructions" rows="3"
+                  placeholder="Any special delivery instructions?"></textarea>
+
+        <!-- Task 12: Submit and Reset -->
+        <button type="submit" class="submit-btn">Submit Order</button>
+        <button type="reset" class="reset-btn">Reset Form</button>
+
+    </form>
+
+</body>
+</html>
