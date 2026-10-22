@@ -1,0 +1,273 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Course Registration</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f4f8;
+            margin: 0;
+            padding: 25px 15px;
+        }
+
+        .container {
+            max-width: 650px;
+            margin: auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+        }
+
+        h1 {
+            text-align: center;
+            color: #1b3765;
+            margin-bottom: 10px;
+        }
+
+        .description {
+            text-align: center;
+            color: #555;
+            margin-bottom: 25px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-top: 15px;
+            margin-bottom: 7px;
+        }
+
+        input:not([type="radio"]):not([type="checkbox"]):not([type="submit"]):not([type="reset"]),
+        select,
+        textarea {
+            width: 100%;
+            padding: 11px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 15px;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            margin-right: 7px;
+        }
+
+        .options label {
+            display: inline-block;
+            font-weight: normal;
+            margin: 8px 15px 5px 0;
+        }
+
+        fieldset {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-top: 18px;
+            padding: 12px 15px;
+        }
+
+        legend {
+            font-weight: bold;
+            color: #1b3765;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 12px;
+            margin-top: 25px;
+        }
+
+        input[type="submit"],
+        input[type="reset"] {
+            flex: 1;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        input[type="submit"] {
+            background-color: #1b3765;
+            color: white;
+        }
+
+        input[type="reset"] {
+            background-color: #ddd;
+            color: #222;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #294d85;
+        }
+
+        input[type="reset"]:hover {
+            background-color: #c5c5c5;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Online Course Registration</h1>
+
+        <p class="description">
+            Register for your preferred online training course.
+        </p>
+
+        <form action="#" method="post" target="_self"
+              enctype="multipart/form-data">
+
+            <!-- Task 7: Hidden input -->
+            <input type="hidden" name="form_name"
+                   value="Online Course Registration">
+
+            <!-- Task 2 and 3: Student details -->
+
+            <label for="studentName">Student Name:</label>
+            <input type="text" id="studentName" name="studentName"
+                   placeholder="Enter your full name" required>
+
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email"
+                   placeholder="Enter your email address" required>
+
+            <label for="mobile">Mobile Number:</label>
+            <input type="tel" id="mobile" name="mobile"
+                   placeholder="Enter your mobile number" required>
+
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age"
+                   placeholder="Enter your age" min="1" max="120">
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password"
+                   placeholder="Create a password" required>
+
+            <!-- Task 4: Gender radio buttons -->
+
+            <fieldset>
+                <legend>Gender:</legend>
+                <div class="options">
+                    <label>
+                        <input type="radio" name="gender"
+                               value="Male" required>
+                        Male
+                    </label>
+
+                    <label>
+                        <input type="radio" name="gender"
+                               value="Female">
+                        Female
+                    </label>
+
+                    <label>
+                        <input type="radio" name="gender"
+                               value="Other">
+                        Other
+                    </label>
+                </div>
+            </fieldset>
+
+            <!-- Task 5: Skills checkboxes -->
+
+            <fieldset>
+                <legend>Skills:</legend>
+                <div class="options">
+                    <label>
+                        <input type="checkbox" name="skills"
+                               value="HTML">
+                        HTML
+                    </label>
+
+                    <label>
+                        <input type="checkbox" name="skills"
+                               value="CSS">
+                        CSS
+                    </label>
+
+                    <label>
+                        <input type="checkbox" name="skills"
+                               value="JavaScript">
+                        JavaScript
+                    </label>
+
+                    <label>
+                        <input type="checkbox" name="skills"
+                               value="Python">
+                        Python
+                    </label>
+                </div>
+            </fieldset>
+
+            <!-- Task 6: Course dropdown -->
+
+            <label for="course">Select Course:</label>
+            <select id="course" name="course" required>
+                <option value="" disabled selected>
+                    -- Select a Course --
+                </option>
+                <option value="Web Development">
+                    Web Development
+                </option>
+                <option value="Python Programming">
+                    Python Programming
+                </option>
+                <option value="Data Analytics">
+                    Data Analytics
+                </option>
+                <option value="Digital Marketing">
+                    Digital Marketing
+                </option>
+            </select>
+
+            <!-- Task 8: Date of birth and class time -->
+
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob">
+
+            <label for="classTime">Preferred Class Time:</label>
+            <input type="time" id="classTime" name="classTime">
+
+            <!-- Task 9: Address and additional information -->
+
+            <label for="address">
+                Address / Additional Information:
+            </label>
+            <textarea id="address" name="address" rows="4"
+                      placeholder="Enter your address or additional details"></textarea>
+
+            <!-- Task 10: File upload -->
+
+            <label for="document">
+                Upload Document or Photograph:
+            </label>
+            <input type="file" id="document" name="document"
+                   accept="image/*,.pdf,.doc,.docx">
+
+            <!-- Task 12: Submit and Reset controls -->
+
+            <div class="buttons">
+                <input type="submit" value="Submit">
+                <input type="reset" value="Reset">
+            </div>
+
+        </form>
+    </div>
+
+</body>
+</html>
